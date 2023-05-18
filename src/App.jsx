@@ -15,16 +15,27 @@ import Add from "./pages/add/Add";
 import Messages from "./pages/messages/Messages"
 import Message from "./pages/message/Message"
 import "./App.scss";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from '@tanstack/react-query'
 
 
 function App() {
 
+  const queryClient = new QueryClient()
+
   const Layout = () => {
     return (
       <div className="app">
+      <QueryClientProvider client={queryClient}>
       <Navbar />
       <Outlet />
       <Footer />
+      </QueryClientProvider>
       </div>
     )
   }
@@ -65,6 +76,14 @@ function App() {
         {
           path:"/message/:id",
           element:<Message/>
+        },
+        {
+          path:"/login",
+          element:<Login/>
+        },
+        {
+          path:"/register",
+          element:<Register/>
         },
       ]
     },

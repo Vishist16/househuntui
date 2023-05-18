@@ -1,7 +1,15 @@
-import React from "react";
-import "./Featured.scss"
+import React, { useState } from "react";
+import "./Featured.scss";
+import {Link, useNavigate} from "react-router-dom";
 
 const Featured = () =>{
+    const [input, setInput] = useState("");
+    const navigate = useNavigate();
+
+    const handleSubmit = () => {
+        navigate(`gigs?search=${input}`);
+    };
+
     return (
         <div className="featured">
             <div className="container">
@@ -10,16 +18,16 @@ const Featured = () =>{
                     <div className="search">
                         <div className="searchInput">
                             <img src="./img/search.png" alt="" />
-                            <input type="text" placeholder='Try searching "Kharar"' />
+                            <input type="text" placeholder='Try searching "Kharar"' onChange={e=>setInput(e.target.value)}/>
                         </div>
-                    <button>Search</button>
+                    <button onClick={handleSubmit}>Search</button>
                     </div>
                     <div className="popular">
                         <span>Popular:</span>
-                        <button>Kharar</button>
-                        <button>Gharuan</button>
-                        <button>Near Chandigarh University</button>
-                        <button>Omega City</button>
+                        <Link className="link menuLink" to="/gigs?cat=Kharar"><button>Kharar</button></Link>
+                        <Link className="link" to="/gigs?cat=Gharuan"><button>Gharuan</button></Link>
+                        <Link className="link" to="/gigs?cat=Chandigarh University"><button>Near Chandigarh University</button></Link>
+                        <Link className="link" to="/gigs?cat=Omega City"><button>Omega City</button></Link>
                     </div>
                 </div>
                 <div className="right">

@@ -3,9 +3,10 @@ import "./Home.scss"
 import Featured from "../../components/featured/Featured";
 import TrustedBy from "../../components/trustedBy/TrustedBy";
 import Slide from "../../components/slide/Slide";
-import {cards, projects} from "../../data";
+import { cards, projects } from "../../data";
 import CatCard from "../../components/catCard/CatCard";
 import ProjectCard from "../../components/projectCard/ProjectCard";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -13,52 +14,55 @@ const Home = () => {
             <Featured />
             <TrustedBy />
             <Slide slidesToShow={5} arrowsScroll={4}>
-                {cards.map(card=>(
+                {cards.map(card => (
                     <CatCard key={card.id} item={card} />
                 ))}
             </Slide>
             <div className="features">
                 <div className="container">
                     <div className="item">
-                        <h1>A whole world of Homes and Companions at your fingertips</h1>
+                        <h1>A whole world of Roommates and Companions at your fingertips</h1>
                         <div className="title">
                             <img src="./img/check.png" alt="" />
-                            The best of every budget
+                            Find the perfect match for every budget
                         </div>
                         <p>
-                            Find high quality services at every price point. No hourly rates, just project-based pricing.
+                            Discover high-quality roommates and companions at various price points.
                         </p>
                         <div className="title">
                             <img src="./img/check.png" alt="" />
-                            Quality work done quickly
+                            Quick and efficient search
                         </div>
                         <p>
-                            Find the right freelancer to begin working on your project within minutes.
-                        </p><div className="title">
+                            Find the ideal roommate or companion that suits your preferences within minutes.
+                        </p>
+                        <div className="title">
                             <img src="./img/check.png" alt="" />
-                            Protected payments, every time
+                            Safe and secure
                         </div>
                         <p>
-                            Always know what you'll pay upfront. Your payment isn't released until you approve the work.
-                        </p><div className="title">
+                            Your data is protected protected.
+                        </p>
+                        <div className="title">
                             <img src="./img/check.png" alt="" />
                             24/7 support
                         </div>
                         <p>
-                            Questions? Our round-the-clock support team is available to help anytime, anywhere..
+                            Have questions? Our dedicated support team is available round-the-clock to assist you.
                         </p>
                     </div>
                     <div className="item">
-                        <video src="public/img/video.mp4" controls></video>
+                        <img className="vidrep" src="./img/vidrep.jpg" alt="" />
+                        {/* <video src="public/img/video.mp4" controls></video> */}
                     </div>
                 </div>
             </div>
             <div className="features dark">
                 <div className="container">
                     <div className="item">
-                        <h1>houseHuntHQ Business</h1>
-                        <h1>A business solution designed for people and owners</h1>
-                        <p>Upgrade to a curated experience packed with tools and benefits, dedicated to businesses</p>
+                        <h1>houseHuntHQ </h1>
+                        <h1>A solution designed for people and owners</h1>
+                        <p>Upgrade to a curated experience packed with tools and benefits, dedicated to users</p>
                         <div className="title">
                             <img src="./img/check.png" alt="" />
                             Connect to people with proven similiar intrests
@@ -71,18 +75,18 @@ const Home = () => {
                             <img src="./img/check.png" alt="" />
                             Manage teamwork and boost productivity with one powerful workspace
                         </div>
-                        <button>Explore houseHuntHQ Business</button>
+                        <Link className="link" to="/gigs?cat="><button>Explore houseHuntHQ</button></Link>
                     </div>
                     <div className="item">
-                        <img src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_870,dpr_1.0/v1/attachments/generic_asset/asset/d9c17ceebda44764b591a8074a898e63-1599597624757/business-desktop-870-x1.png" alt="" />
+                        <img src="./img/shutp.jpg" alt="" />
                     </div>
                 </div>
             </div>
-            <Slide slidesToShow={4} arrowsScroll={4}>
-                {projects.map(card=>(
+            {/* <Slide slidesToShow={4} arrowsScroll={4}>
+                {projects.map(card => (
                     <ProjectCard key={card.id} item={card} />
                 ))}
-            </Slide>
+            </Slide> */}
         </div>
     )
 }

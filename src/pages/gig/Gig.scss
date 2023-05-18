@@ -1,51 +1,55 @@
-.gig{
+.gig {
     display: flex;
     justify-content: center;
 
-    .container{
+    .container {
         width: 1400px;
-        padding: 30px 0px; 
+        padding: 30px 0px;
         display: flex;
         gap: 50px;
 
-        .left{
+        .left {
             flex: 2;
             display: flex;
             flex-direction: column;
             gap: 20px;
 
-            .breadCrumbs{
+            .breadCrumbs {
                 font-weight: 300;
                 text-transform: uppercase;
                 font-size: 13px;
                 color: #555;
             }
 
-            .user{
+            .user {
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                
-                .pp{
+
+                .pp {
                     width: 32px;
                     height: 32px;
                     border-radius: 50%;
                     object-fit: cover;
                 }
-                span{
+
+                span {
                     font-size: 14px;
                     font-weight: 500;
                 }
-                .stars{
+
+                .stars {
                     display: flex;
                     align-items: center;
                     gap: 5px;
-                    img{
+
+                    img {
                         width: 14px;
                         height: 14px;
 
                     }
-                    span{
+
+                    span {
                         font-size: 14px;
                         font-weight: bold;
                         color: #ffc108;
@@ -53,95 +57,101 @@
                 }
             }
 
-            .slider{
-                img{
+            .slider {
+                img {
                     max-height: 500px;
                     object-fit: contain;
                 }
             }
 
-            h2{
+            h2 {
                 font-weight: 400;
             }
 
-            p{
+            p {
                 font-weight: 300;
                 color: #555;
                 line-height: 25px;
             }
 
-            .seller{
+            .seller {
                 margin-top: 50px;
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
 
-                .user{
+                .user {
                     display: flex;
                     align-items: center;
                     gap: 20px;
 
-                    img{
+                    img {
                         width: 100px;
                         height: 100px;
                         border-radius: 50%;
                         object-fit: cover;
                     }
-                    .info{
+
+                    .info {
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
 
-                        .stars{
+                        .stars {
                             display: flex;
                             align-items: center;
                             gap: 5px;
-                            img{
+
+                            img {
                                 width: 14px;
                                 height: 14px;
-        
+
                             }
-                            span{
+
+                            span {
                                 font-size: 14px;
                                 font-weight: bold;
                                 color: #ffc108;
                             }
                         }
-                        button{
-                            background-color: white;
-                            border-radius: 5px;
-                            border: 1px solid gray;
-                            padding: 10px;
-                            cursor: pointer;
+
+                        form {
+                            button {
+                                background-color: white;
+                                border-radius: 5px;
+                                border: 1px solid gray;
+                                padding: 10px;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
 
-                .box{
+                .box {
                     border: 1px solid lightgray;
                     border-radius: 5px;
                     padding: 20px;
                     margin-top: 20px;
 
-                    .items{
+                    .items {
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: space-between;
 
-                        .item{
+                        .item {
                             width: 300px;
                             display: flex;
                             flex-direction: column;
                             gap: 10px;
                             margin-bottom: 20px;
 
-                            .title{
+                            .title {
                                 font-weight: 300;
                             }
                         }
                     }
 
-                    hr{
+                    hr {
                         height: 0;
                         border: 1px solid lightgray;
                         margin-bottom: 20px;
@@ -149,69 +159,9 @@
                 }
             }
 
-            .reviews{
-                margin-top: 50px;
-                .item{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-                    margin: 20px 0px;
-                    
-                    .user{
-                        display: flex;
-                        align-items: center;
-                        .pp{
-                            height: 50px;
-                            width: 50px;
-                            border-radius: 50%;
-                        }
-                        .country{
-                            display: flex;
-                            align-items: center;
-                            gap: 10px;
-                            color: gray;
-
-                            img{
-                                width: 20px;
-                            }
-                        }
-                    }
-
-                    .stars{
-                        display: flex;
-                        align-items: center;
-                        gap: 5px;
-                        img{
-                            width: 14px;
-                            height: 14px;
-    
-                        }
-                        span{
-                            font-size: 14px;
-                            font-weight: bold;
-                            color: #ffc108;
-                        }
-                    }
-
-                    .helpful{
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-
-                        img{
-                            width: 14px;
-                        }
-                    }
-                }
-
-                hr{
-                    height: 0;
-                    border: .5px solid lightgray;
-                    margin: 50px 0px;
-                }
-            }
         }
-        .right{
+
+        .right {
             flex: 1;
             border: 1px solid lightgray;
             padding: 20px;
@@ -224,57 +174,59 @@
             height: max-content;
             max-height: 500px;
 
-            .price{
+            .price {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
 
-                h2{
+                h2 {
                     font-weight: 300;
                 }
 
-                h3{
+                h3 {
                     font-weight: 500;
                 }
             }
 
-            p{
+            p {
                 color: gray;
                 margin: 10px 0px;
             }
 
-            .details{
+            .details {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 font-size: 14px;
 
-                .item{
+                .item {
                     display: flex;
                     align-items: center;
                     gap: 10px;
 
-                    img{
+                    img {
                         width: 20px;
                     }
                 }
 
             }
-            .features{
-                .item{
+
+            .features {
+                .item {
                     display: flex;
                     align-items: center;
                     gap: 10px;
                     font-weight: 300;
                     color: gray;
                     margin-bottom: 5px;
-        
-                    img{
-                    width: 14px;
+
+                    img {
+                        width: 14px;
                     }
                 }
             }
-            button{
+
+            button {
                 background-color: #1dbf73;
                 padding: 10px;
                 color: white;
